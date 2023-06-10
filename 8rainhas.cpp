@@ -9,13 +9,22 @@ string conversorarquivotxt(const string& arq) {
     return str;
 }
 
+int char1_count(const string str) {
+  int qtde = 0;
+  for (char ch : str) {
+    if (ch == '1') {
+      qtde++;
+    }
+  }
+  return qtde;
+}
 
 int solucao_8rainhas(const string& teste) {
   string tabuleiro = conversorarquivotxt(teste);
   if (tabuleiro.empty() == true || tabuleiro.size() != 78 ||
-  tabuleiro.find("1") == string::npos) {
+  char1_count(tabuleiro) != 8) {
     return -1;
   } else {
-    return tabuleiro.size();
+    return char1_count(tabuleiro);
   }
 }

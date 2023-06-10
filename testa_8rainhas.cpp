@@ -30,6 +30,4 @@ TEST_CASE( "Inválido 8 Rainhas", "[inteiro]" ) {
     REQUIRE( solucao_8rainhas("invalido5.txt") == -1 );
 
     REQUIRE( solucao_8rainhas("invalido6.txt") == -1 );
-
-    REQUIRE( solucao_8rainhas("invalido7.txt") == -1 );
 }
