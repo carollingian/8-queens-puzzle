@@ -26,9 +26,9 @@ int not_char1or0(const string str) {
     (ch != '\0')) {
         qtde++;
       }
- }
+  }
   return qtde;
-} 
+}
 
 int solucao_8rainhas(const string& teste) {
   string tabuleiro = conversorarquivotxt(teste);
