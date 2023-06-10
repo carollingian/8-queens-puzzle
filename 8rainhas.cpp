@@ -12,7 +12,8 @@ string conversorarquivotxt(const string& arq) {
 
 int solucao_8rainhas(const string& teste) {
   string tabuleiro = conversorarquivotxt(teste);
-  if (tabuleiro.empty() == true || tabuleiro.size() != 78) {
+  if (tabuleiro.empty() == true || tabuleiro.size() != 78 ||
+  tabuleiro.find("1") == string::npos) {
     return -1;
   } else {
     return tabuleiro.size();
