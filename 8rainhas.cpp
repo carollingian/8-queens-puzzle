@@ -12,6 +12,9 @@ string conversorarquivotxt(const string& arq) {
 
 int solucao_8rainhas(const string& teste) {
   string tabuleiro = conversorarquivotxt(teste);
-  std::cout << tabuleiro;
-  return 2;
+  if (tabuleiro.empty() == true) {
+    return -1;
+  } else {
+    return 5;
+  }
 }

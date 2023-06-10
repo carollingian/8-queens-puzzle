@@ -19,7 +19,7 @@ TEST_CASE( "Não é Solução 8 Rainhas", "[inteiro]" ) {
 }
 
 TEST_CASE( "Inválido 8 Rainhas", "[inteiro]" ) {
-    REQUIRE( solucao_8rainhas("invalido1") == -1 );
+    REQUIRE( solucao_8rainhas("invalido1.txt") == -1 );
 
-    
+    REQUIRE( solucao_8rainhas("invalido2.txt") == -1 );
 }

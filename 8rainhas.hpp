@@ -6,4 +6,4 @@ using std::string;
 
 string conversorarquivotxt(const string& arq);
 
-int solucao_8rainhas(const string& arq);
+int solucao_8rainhas(const string& teste);
