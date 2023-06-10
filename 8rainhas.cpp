@@ -12,7 +12,7 @@ string conversorarquivotxt(const string& arq) {
 
 int solucao_8rainhas(const string& teste) {
   string tabuleiro = conversorarquivotxt(teste);
-  if (tabuleiro.empty() == true || tabuleiro.size() < 60) {
+  if (tabuleiro.empty() == true || tabuleiro.size() != 78) {
     return -1;
   } else {
     return tabuleiro.size();
