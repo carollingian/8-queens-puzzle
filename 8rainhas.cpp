@@ -100,7 +100,7 @@ int solucao_8rainhas(const string& teste) {
     if (flaglinha > 0 || flagcoluna > 0) {
       return 0;
     } else {
-      return 2;
+      return 1;
     }
   }
 }
