@@ -25,6 +25,8 @@ TEST_CASE( "Não é Solução 8 Rainhas", "[inteiro]" ) {
 
     REQUIRE( solucao_8rainhas("naosolucao5_8rainhas.txt") == 0 );
 
+    REQUIRE( solucao_8rainhas("naosolucao6_8rainhas.txt") == 0 );
+
 
 }
 
