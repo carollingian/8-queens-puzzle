@@ -1,12 +1,9 @@
 // "No Copyright"
 
-#ifndef 8RAINHAS_HPP_
-#define 8RAINHAS_HPP_
 #include <iostream>
 #include <string>
 #include <fstream>
 #include <streambuf>
-#endif  // 8RAINHAS_HPP_
 using std::string;
 
 string conversorarquivotxt(const string& arq);

@@ -5,6 +5,7 @@
 #include <string>
 #include <fstream>
 #include <streambuf>
+using std::string;
 
 // FUNÇÃO Conversão de .txt para string
 string conversorarquivotxt(const string& arq) {
@@ -89,10 +90,13 @@ int solucao_8rainhas(const string& teste) {
     }
 
     // Posicionamento Rainhas
+    string ataques;
+    int rainhax[8];
     int rainhay[8];
     for (int i = 0; i < 8; i++) {
       for (int j = 0; j < 8; j++) {
         if (matriz[i][j] == 1) {
+          rainhax[i] = i+1;
           rainhay[i] = j;
         }
       }
@@ -118,6 +122,7 @@ int solucao_8rainhas(const string& teste) {
     int flagcoluna = 0;
     for (int i = 0; i < 8; i++) {
       coluna1 = 0;
+      string ataquecoluna;
       for (int j = 0; j < 8; j++) {
         if (matriz[j][i] == 1) {
           coluna1++;
@@ -141,7 +146,27 @@ int solucao_8rainhas(const string& teste) {
 
     // Retornos Não Solução e Solução
     if (flaglinha > 0 || flagcoluna > 0 || flagdiagonal > 0) {
+      std::ofstream arquivo;/*Criação de arquivo ataques.txt*/
+      arquivo.open("ataques.txt");
+
+      // Organização de ataques em string
+          for (int i = 0; i < 7; i++) {
+            for (int j = i + 1; j < 8; j++) {
+              if (rainhax[i] == rainhax[j] ||
+              rainhay[i] == rainhay[j] ||
+              j - i == rainhay[j] - rainhay[i] ||
+              j - i == rainhay[i] - rainhay[j]) {
+                ataques += std::to_string(rainhax[i]) + ',' +
+                std::to_string(rainhay[i]) + ' ' +
+                std::to_string(rainhax[j]) + ',' +
+                std::to_string(rainhay[j]) + '\n';
+              }
+            }
+
+      arquivo << ataques;
+      arquivo.close();
       return 0;
+          }
     } else {
       return 1;
     }
