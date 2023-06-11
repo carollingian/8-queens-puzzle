@@ -1,6 +1,10 @@
 // "No Copyright"
 
 #include "8rainhas.hpp"
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <streambuf>
 
 // FUNÇÃO Conversão de .txt para string
 string conversorarquivotxt(const string& arq) {
