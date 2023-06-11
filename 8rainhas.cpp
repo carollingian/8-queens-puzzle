@@ -69,7 +69,6 @@ int solucao_8rainhas(const string& teste) {
     // Contagem de Rainhas por linha
     int linha1 = 0;
     int flaglinha = 0;
-    int coluna = 0;
     for (int i = 0; i < 8; i++) {
       linha1 = 0;
       for (int j = 0; j < 8; j++) {
