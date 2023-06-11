@@ -84,6 +84,16 @@ int solucao_8rainhas(const string& teste) {
       }
     }
 
+    // Posicionamento Rainhas
+    int rainhay[8];
+    for (int i = 0; i < 8; i++) {
+      for (int j = 0; j < 8; j++) {
+        if (matriz[i][j] == 1) {
+          rainhay[i] = j;
+        }
+      }
+    }
+
     // Contagem de Rainhas por linha
     int linha1 = 0;
     int flaglinha = 0;
@@ -114,8 +124,19 @@ int solucao_8rainhas(const string& teste) {
       }
     }
 
+    // Verificação Diagonal das Rainhas
+    int flagdiagonal = 0;
+    for (int i = 0; i < 7; i++) {
+      for (int j = i + 1; j < 8; j++) {
+        if (j - i == rainhay[j] - rainhay[i]
+        || j - i == rainhay[i] - rainhay[j]) {
+          flagdiagonal++;
+        }
+      }
+    }
+
     // Retornos Não Solução e Solução
-    if (flaglinha > 0 || flagcoluna > 0) {
+    if (flaglinha > 0 || flagcoluna > 0 || flagdiagonal > 0) {
       return 0;
     } else {
       return 1;
