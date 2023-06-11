@@ -15,8 +15,13 @@ TEST_CASE( "Solução 8 Rainhas", "[inteiro]" ) {
 TEST_CASE( "Não é Solução 8 Rainhas", "[inteiro]" ) {
     REQUIRE( solucao_8rainhas("naosolucao1_8rainhas.txt") == 0 );
 
-    
+    REQUIRE( solucao_8rainhas("naosolucao2_8rainhas.txt") == 0 );
+
+
 }
+
+
+
 
 TEST_CASE( "Inválido 8 Rainhas", "[inteiro]" ) {
     REQUIRE( solucao_8rainhas("invalido1.txt") == -1 );
@@ -30,4 +35,6 @@ TEST_CASE( "Inválido 8 Rainhas", "[inteiro]" ) {
     REQUIRE( solucao_8rainhas("invalido5.txt") == -1 );
 
     REQUIRE( solucao_8rainhas("invalido6.txt") == -1 );
+
+    
 }
