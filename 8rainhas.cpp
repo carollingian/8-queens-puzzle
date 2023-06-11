@@ -33,6 +33,23 @@ int not_char1or0(const string str) {
   return qtde;
 }
 
+// Verificação de Formatação
+int formato(const string str) {
+  int q0ou1 = 0;
+  int flagformato = 0;
+  for (char ch : str) {
+    if (ch == '0' || ch == '1') {
+      q0ou1++;
+    } else if (ch == '\n') {
+      if (q0ou1 != 8) {
+        flagformato++;
+      }
+      q0ou1 -= 8;
+    }
+  }
+  return flagformato;
+}
+
 
 // ------------------- FUNÇÃO main() -------------------
 int solucao_8rainhas(const string& teste) {
@@ -40,7 +57,8 @@ int solucao_8rainhas(const string& teste) {
 
 // Condições de Invalidação
   if (tabuleiro.empty() == true || tabuleiro.size() != 78 ||
-  char1_count(tabuleiro) != 8 || not_char1or0(tabuleiro) != 0) {
+  char1_count(tabuleiro) != 8 || not_char1or0(tabuleiro) != 0
+  || formato(tabuleiro) > 0) {
     return -1;
 
 // Condições de Solução
