@@ -165,7 +165,7 @@ int solucao_8rainhas(const string& teste) {
           }
       arquivo << ataques;
       arquivo.close();
-      return 0;     
+      return 0;
     } else {
       return 1;
     }

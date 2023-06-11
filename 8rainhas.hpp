@@ -1,10 +1,8 @@
 // "No Copyright"
 
-#include <iostream>
 #include <string>
-#include <fstream>
-#include <streambuf>
 using std::string;
+
 
 string conversorarquivotxt(const string& arq);
 

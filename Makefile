@@ -1,7 +1,6 @@
 all: testa_8rainhas.cpp   8rainhas.cpp 8rainhas.hpp 8rainhas.o
 	g++ -std=c++11 -Wall 8rainhas.o testa_8rainhas.cpp -o testa_8rainhas
 	./testa_8rainhas
-	#use comentario se necessario
 
 compile: testa_8rainhas.cpp   8rainhas.cpp 8rainhas.hpp 8rainhas.o
 	g++ -std=c++11 -Wall 8rainhas.o testa_8rainhas.cpp -o testa_8rainhas
@@ -22,7 +21,7 @@ debug: testa_8rainhas.cpp   8rainhas.cpp 8rainhas.hpp
 	g++ -std=c++11 -Wall -Wall -g -c 8rainhas.cpp
 	g++ -std=c++11 -Wall  -g 8rainhas.o testa_8rainhas.cpp -o testa_8rainhas
 	gdb testa_8rainhas
-	
+
 	
 cppcheck: testa_8rainhas.cpp   8rainhas.cpp 8rainhas.hpp
 	cppcheck  --enable=warning . 
