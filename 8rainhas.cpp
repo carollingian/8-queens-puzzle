@@ -81,8 +81,23 @@ int solucao_8rainhas(const string& teste) {
       }
     }
 
+    // Contagem de Rainhas por coluna
+    int coluna1 = 0;
+    int flagcoluna = 0;
+    for (int i = 0; i < 8; i++) {
+      coluna1 = 0;
+      for (int j = 0; j < 8; j++) {
+        if (matriz[j][i] == 1) {
+          coluna1++;
+        }
+      if (coluna1 > 1) {
+        flagcoluna++;
+      }
+      }
+    }
+
     // Retornos Não Solução e Solução
-    if (flaglinha > 0) {
+    if (flaglinha > 0 || flagcoluna > 0) {
       return 0;
     } else {
       return 2;
