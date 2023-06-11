@@ -23,6 +23,4 @@
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"Página Principal",url:"index.html"},
-{text:"Arquivos",url:"files.html",children:[
-{text:"Lista de Arquivos",url:"files.html"}]}]}
+{text:"Página Principal",url:"index.html"}]}
